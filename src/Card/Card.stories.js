@@ -11,8 +11,10 @@ export const SimpleCard = (args) => {
   return (
     <Fragment>
       <Card {...args} displaySide={displaySide}/>
-      <button onClick={() => setDisplaySide(CardStates.front)}>Flip to Front</button>
-      <button onClick={() => setDisplaySide(CardStates.back)}>Flip to Back</button>
+      <div css={{marginTop: '16px'}}>
+        <button onClick={() => setDisplaySide(CardStates.front)}>Flip to Front</button>
+        <button onClick={() => setDisplaySide(CardStates.back)}>Flip to Back</button>
+      </div>
     </Fragment>
   )
 }
